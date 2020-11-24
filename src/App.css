@@ -1,38 +1,126 @@
-.App {
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Press+Start+2P&family=Shrikhand&display=swap");
+
+/* GLOBAL */
+:root {
+  --honeydew: #f1faee;
+  --imperial-red: #e63946;
+  --celadon-blue: #457b9d;
+  --powder-blue: #a8dadc;
+  --charcoal: #404e5c;
+  --charcoal: #1d3557;
+  --prussian-blue: #1d3557;
+  --outrageous-orange: #fc7a57;
+  --gradient: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--gradient);
+  font-family: sans-serif;
+}
+
+#body-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* HEADER */
+#header-container {
+  color: var(--honeydew);
+  margin-bottom: 15vh;
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  color: var(--celadon-blue);
+  text-shadow: 5px 5px var(--prussian-blue);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#subhead {
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  color: var(--honeydew);
+  font-size: 1.5em;
+  text-shadow: 2px 2px var(--charcoal);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* QUOTE */
+#quote-box {
+  padding: 35px;
+  width: 50%;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#quote-container {
+  margin-bottom: 30px;
+}
+
+#text {
+  color: var(--charcoal);
+  font-size: 3rem;
+  padding-bottom: 10px;
+  min-height: 15vh;
+  text-shadow: 1px 1px var(--honeydew);
+}
+
+#text::before {
+  font-family: FontAwesome;
+  content: "\f10d";
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+#text::after {
+  font-family: FontAwesome;
+  content: "\f10e";
+  display: inline;
+  padding-left: 20px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+#author {
+  color: var(--imperial-red);
+  /*   text-align: right; */
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+}
+
+#author::before {
+  font-family: FontAwesome;
+  content: "\f007";
+  display: inline-block;
+  padding-right: 10px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+/* BUTTONS */
+#button-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  color: var(--honeydew);
+  background-color: var(--prussian-blue);
+  border-radius: 6px;
+  border: 0px solid #ffffff;
+  padding: 13px 16px 12px 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  background: var(--celadon-blue);
 }
